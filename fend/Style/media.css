@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .header_titulo {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .header_logo {
+        width: 100px;
+    }
+}

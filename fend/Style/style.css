@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header {
+    background-color: #14710A;
+    color: rgb(255, 255, 255);
+    height: 10dvh;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    position: relative; /* importante */
+}
+
+.header_conteudo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_logo {
+    width: 250px;
+}
+
+.header_titulo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+main {
+    flex: 1; /* ocupa o resto da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-------- TELA DE LOGIN ---------*/
+
+.container_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 500px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+/* Título */
+.container_login h2 {
+    margin-bottom: 20px;
+    color: #14710A;
+}
+
+.login_campos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.login_campos input{
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    }
+
+/* Efeito ao clicar */
+.login_campos input:focus {
+    border: 1px solid #14710A;
+    box-shadow: 0 0 5px rgba(20, 113, 10, 0.3);
+}
+
+/* Botão Entrar*/
+.login_campos button {
+    width: 85%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #14710A;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-bottom: 10px;
+}
+
+/* Hover bonito */
+.login_campos button:hover {
+    background-color: #0f5c08;
+}
+
+/* Clique */
+.login_campos button:active {
+    transform: scale(0.98);
+}
+
+/*-------- TELA DE ALTERAR A SENHA ---------*/
