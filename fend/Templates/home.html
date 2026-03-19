@@ -1,20 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Cargas</title>
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/media.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
 </head>
+
 <body>
+
     <head>
         <div class="header">
             <div class="header_conteudo">
                 <img class="header_logo" src="../img/logo-nutrepampa.png" alt="Logo Nutrepampa">
                 <h2 class="header_titulo">CONTROLE DE SAÍDA E AGENDAMENTO DE CARGAS</h2>
             </div>
-        </div>
+        </div>    
     </head>
+
+    <div class="container_home">
+        <div class="filtros">
+            <select name="Estabelecimento" id="select_estab" class="filtros_home">Estabelecimento</select>
+            <button class="filtros_home btn_filtrar">Filtrar</button>
+        </div>
+        <div class="calendario">
+            <div id="calendar"></div>
+        </div>
+    </div>
 </body>
+
+<script src="../../bend/scripts/telaHome.js"></script>
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const calendarEl = document.getElementById('calendar');
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'pt-br',
+            height: 600,
+
+            events: [
+                {
+                    title: 'Soja',
+                    date: '2026-03-19',
+                    color: '#2f6fed'
+                },
+                {
+                    title: 'Milho',
+                    date: '2026-03-19',
+                    color: '#28a745'
+                },
+                {
+                    title: '🚚 Soja',
+                    date: '2026-03-01'
+                },
+                {
+                    title: '🚚 Milho',
+                    date: '2026-03-27'
+                }, {
+                    title: 'Soja - 1000kg',
+                    date: '2026-03-11'
+                },
+                {
+                    title: 'Milho - 800kg',
+                    date: '2026-03-13'
+                },
+                {
+                    title: 'Trigo - 500kg',
+                    date: '2026-03-21'
+                }
+            ],
+
+
+            dateClick: function (info) {
+                const data = info.dateStr;
+
+                // Redireciona para outra página passando a data
+                window.location.href = `tabelaCargas.html?data=${data}`;
+            }
+
+        });
+
+        calendar.render();
+    });
+</script>
+
 </html>

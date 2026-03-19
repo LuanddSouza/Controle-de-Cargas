@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Cargas</title>
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+
     <head>
         <div class="header">
             <div class="header_conteudo">
@@ -15,6 +19,42 @@
                 <h2 class="header_titulo">CONTROLE DE SAÍDA E AGENDAMENTO DE CARGAS</h2>
             </div>
         </div>
+        <div>
+            <div class="filtos_tabela">
+            <div class="filtos_tabela_periodo">
+                <select name="" class="filtro" id="select_estab">Estabelecimentos</select>
+                <input type="date" class="filtro">
+                <button class="filtro_btn">Filtrar</button>
+            </div>
+
+            <div class="filtro_tabela_busca">
+                <div class="input-icon">
+                    <input type="text" class="filtro" placeholder="Agendamento">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                </div>
+                <div class="input-icon">
+                    <input type="text"class="filtro"  placeholder="Coordenador">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
     </head>
 </body>
+
+<script src="../../bend/scripts/telaHome.js"></script>
+<script>
+    // Pega os parâmetros da URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Pega especificamente a "data"
+    const data = params.get('data');
+
+    console.log("Data recebida:", data);
+
+    // Exemplo: colocar no input
+    document.querySelector("input").value = data;
+</script>
+
 </html>
