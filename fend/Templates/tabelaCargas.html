@@ -8,38 +8,123 @@
     <link rel="stylesheet" href="../Style/style.css">
     <link rel="stylesheet" href="../Style/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-gray-100">
 
     <head>
-        <div class="header">
+        <div class="header bg-green-700">
             <div class="header_conteudo">
                 <img class="header_logo" src="../img/logo-nutrepampa.png" alt="Logo Nutrepampa">
                 <h2 class="header_titulo">CONTROLE DE SAÍDA E AGENDAMENTO DE CARGAS</h2>
             </div>
         </div>
         <div>
-            <div class="filtos_tabela">
-            <div class="filtos_tabela_periodo">
-                <select name="" class="filtro" id="select_estab">Estabelecimentos</select>
-                <input type="date" class="filtro">
-                <button class="filtro_btn">Filtrar</button>
-            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-md flex flex-col gap-4">
 
-            <div class="filtro_tabela_busca">
-                <div class="input-icon">
-                    <input type="text" class="filtro" placeholder="Agendamento">
-                    <span class="icon"><i class="fa fa-search"></i></span>
+                <div class="flex flex-col md:flex-row gap-3 items-center justify-between">
+
+                    <div class="flex flex-col md:flex-row gap-3 w-full">
+                        <select id="select_estab"
+                            class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+                            <option>Estabelecimentos</option>
+                        </select>
+
+                        <input type="date"
+                            class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+
+                        <button class="bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-600 transition">
+                            Filtrar
+                        </button>
+
+                        <a href="./home.html"
+                            class="bg-gray-200 text-gray-700 px-5 py-2 rounded-lg hover:bg-gray-300 transition text-center">
+                            Voltar
+                        </a>
+                    </div>
                 </div>
-                <div class="input-icon">
-                    <input type="text"class="filtro"  placeholder="Coordenador">
-                    <span class="icon"><i class="fa fa-search"></i></span>
+
+                <div class="flex flex-col md:flex-row gap-3">
+
+                    <div class="relative w-full">
+                        <input type="text" placeholder="Agendamento"
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+
+                        <span class="absolute left-3 top-2.5 text-gray-400">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+
+                    <div class="relative w-full">
+                        <input type="text" placeholder="Coordenador"
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+                        <span class="absolute left-3 top-2.5 text-gray-400">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="container_tabela">
+            <div class="p-6 bg-gray-100 min-h-screen flex  justify-center">
+                <div class="w-full max-w-8xl bg-white shadow-lg rounded-2xl overflow-hidden overflow-x-auto">
+
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-green-700 text-white">
+                            <tr>
+                                <th class="p-4">Agendamento</th>
+                                <th class="p-4">Coordenador</th>
+                                <th class="p-4">Hr. Carregamento</th>
+                                <th class="p-4">Quantidade </th>
+                                <th class="p-4">Hr. Liberação Qualidade</th>
+                                <th class="p-4">Motorista/telefone</th>
+                                <th class="p-4">Ordem de Carga</th>
+                                <th class="p-4">Tipo de Carga</th>
+                                <th class="p-4">Hor. Faturamento</th>
+                                <th class="p-4">STATUS</th>
+                                <th class="p-4">ETAPA</th>
+                                <th class="p-4">Observações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-4 font-medium">9004</td>
+                                <td class="p-4 text-gray-600">Felipe</td>
+                                <td class="p-4">
+                                    <span class="text-black-600 px-3 py-1 rounded-full text-sm">
+                                        jkd-3a43
+                                    </span>
+                                </td>
+                                <td class="p-4">
+                                    <span class=" text-black-600 px-3 py-1 rounded-full text-sm">
+                                        Faturamento
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-4 font-medium">9001</td>
+                                <td class="p-4 text-gray-600">Rafael</td>
+                                <td class="p-4">
+                                    <span class=" text-black-600 px-3 py-1 rounded-full text-sm">
+                                        awd-3v32
+                                    </span>
+                                </td>
+                                <td class="p-4">
+                                    <span class=" text-black-600 px-3 py-1 rounded-full text-sm">
+                                        Produçao
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
         </div>
-</div>
     </head>
 </body>
 

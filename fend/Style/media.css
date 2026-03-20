@@ -29,6 +29,10 @@
     }
 
     /*-------- TELA HOME ----------*/
+    .filtros {
+        padding: 20px;
+    }
+
     .filtros_home {
         height: 34px;
         width: 200px;
@@ -43,4 +47,25 @@
         width: 60px;
     }
 
+    /*--------------Calendario--------------*/
+
+
+
+    .calendario {
+        width: 360px;
+        height: 300px;
+        font-size: 14px;
+    }
+
+    #calendar {
+        width: 320px;
+    }
+
+    .fc-toolbar-title {
+        font-weight: 500;
+    }
+
+    .fc-button {
+        padding: 1px !important;
+    }
 }

@@ -22,7 +22,6 @@ body {
 
 
 .header {
-    background-color: #14710A;
     color: rgb(255, 255, 255);
     height: 10dvh;
     padding: 10px 20px;
@@ -380,11 +379,38 @@ main {
 }
 
 .filtro {
-    width: 180px;
-    height: 24px;
+    width: 280px;
+    height: 34px;
+    border-radius: 6px;
 }
 
 .filtro_btn {
     width: 80px;
+    height: 34px;
+    background-color: #ffffff;
+    border: 1px solid #828282;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+}
+
+.filtro_data {
+    height: 29px;
+}
+
+.filto_busca {
     height: 24px;
+}
+
+.a_voltar {
+    display: inline-block;
+    text-decoration: none;
+    width: 60px;
+    height: 28px;
+    padding-top: 5px;
+}
+
+.filtro_btn:hover {
+    background-color: #cecece;
 }
